@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const root = document.querySelector('#root');
+        const app = ReactDOM.createRoot(root);
+        
+        //const li = <li className="myLi">text</li>
+        
+        const texts = ['Hello','World','How','Are']
+
+        //const newTexts = texts.map(text=><li>{text}</li>)
+        //console.log(newTexts)
+        
+        /*
+            <li>{texts[0]}</li>
+            <li>{texts[1]}</li>
+            <li>{texts[2]}</li>
+            <li>{texts[3]}</li>
+            <ul>
+                {
+                    texts.map(text=><li>{text}</li>)
+                }
+            </ul>
+        */
+        /* 
+                const users = [
+            {
+                "name": "Mrs. Dennis Schulist",
+                "username": "Leopoldo_Corkery",
+                "email": "Karley_Dach@jasper.info",
+            },
+            {
+                "name": "Kurtis Weissnat",
+                "username": "Elwyn.Skiles",
+                "email": "Telly.Hoeger@billy.biz",
+            },
+            {
+                "name": "Nicholas Runolfsdottir V",
+                "username": "Maxime_Nienow",
+                "email": "Sherwood@rosamond.me",
+            },
+        ]
+        const UsersList = () => {
+            return (
+                <div className="users">
+                    {
+                        users.map(user=>
+                        <div className="user">
+                            name: {user.name} <br/>
+                            username: {user.username} <br/>
+                            email: {user.email} <br/><br/>
+                        </div>
+                        )
+                    }
+                </div>)
+        }
+
+        app.render(
+            <div>
+                <h1>myFirst site React</h1>
+                <UsersList />
+            </div>
+        )
+        {
+            users.map(user=>
+            <div>
+                name: {user.name} <br/>
+                username: {user.username} <br/>
+                email: {user.email} <br/><br/>
+            </div>
+            )
+            
+        }
+        */
+
+        const UsersList = (props) => {
+            console.log(props)
+            return (
+                <div className="users">
+                    {
+                        props.usersList.map(user=>
+                        <div className="user">
+                            name: {user.name} <br/>
+                            username: {user.username} <br/>
+                            email: {user.email} <br/><br/>
+                        </div>
+                        )
+                    }
+                </div>)
+        }
+
+        const users = [
+            {
+                "name": "Mrs. Dennis Schulist",
+                "username": "Leopoldo_Corkery",
+                "email": "Karley_Dach@jasper.info",
+            },
+            {
+                "name": "Kurtis Weissnat",
+                "username": "Elwyn.Skiles",
+                "email": "Telly.Hoeger@billy.biz",
+            },
+            {
+                "name": "Nicholas Runolfsdottir V",
+                "username": "Maxime_Nienow",
+                "email": "Sherwood@rosamond.me",
+            },
+        ]
+
+        const usersTwo = [
+            {
+                "name": "N1",
+                "username": "UN1",
+                "email": "E1",
+            },
+            {
+                "name": "N1",
+                "username": "UN1",
+                "email": "E1",
+            },
+        ]
+
+        app.render(
+            <div>
+                <h1>myFirst site React</h1>
+                <UsersList usersList={users}  />
+                <br/>
+                <br/>
+                <UsersList usersList={usersTwo} />
+            </div>
+        )
+   
+   
+        /*
+            Создать новый файл реакта в папке homework
+            Создать объект на 10 отзывов
+            Отрисовать все 10 отзывов 
+            Красиво графически оформить 
+            И добавить адаптив
+            К примеру отрисовуются по 4 поста в линию на пк
+            По 2 на планшете
+            и по 1 посту в линию на телефоне
+            https://jsonplaceholder.typicode.com/comments
+        */
+
+   </script>
+
+</body>
+</html>
+
+
