@@ -14,7 +14,7 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>    
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script>
+    <script type="text/babel">
         /*
             Создать новый файл реакта в папке homework +++
             Создать объект на 10 отзывов               +++
@@ -30,20 +30,26 @@
         const app = ReactDOM.createRoot(root);
 
         const CommentsList = (props) => {
-            console.log(props)
             return (
                 <div className="comments">
                     {
                         props.commentsList.map(comment=>
-                        <div className="comments">
-                            name: {comments.name} <br/>
-                            username: {comments.email} <br/>
-                            email: {comments.body} <br/>
-                        </div>
+                            <CommentItem comment={comment}/>
                         )
                     }
                 </div>)
         }
+
+        const CommentItem = (props) => {
+            return (
+                <div className="comment">
+                    name: {props.comment.name} <br/>
+                    username: {props.comment.email} <br/>
+                    body: {props.comment.body} <br/><br/>
+                </div>
+            )
+        }
+
 
         const comments = [
         {
@@ -96,6 +102,11 @@
             "email": "Carmen_Keeling@caroline.name",
             "body": "voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas dolores velit et non\naut quia necessitatibus\nnostrum quaerat nulla et accusamus nisi facilis"
         }]
-    </script>
+        
+        app.render(
+            <CommentsList commentsList = {comments} />
+        )
+   
+   </script>
 </body>
 </html>
