@@ -12,5 +12,4 @@ const DatesItem = () => {
         </div>
     )
 }
-
 export default DatesItem
