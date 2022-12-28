@@ -1,0 +1,31 @@
+.post__list{
+    display: flex;
+}
+
+.add__post{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 300px;
+}
+
+.btn__add{
+    width: 208px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    color: burlywood;
+    text-align: center;
+}
+
+.input{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    color: burlywood;
+    width: 200px;
+}

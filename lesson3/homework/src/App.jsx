@@ -1,30 +1,31 @@
 import React, { useState } from 'react'
-import FormPostList from './components/FormPostList';
-import AddPost from './components/AddPost';
+import AddPost from './components/AddPost'
+import PostList from './components/FormPostList';
+
 import './App.css';
 
 const App = () => {
+
   const [posts,setPosts] = useState([])
 
   const addPost = (post) => {
     setPosts([...posts,post])
   }
-  return (
-    <div className="App">
-      <AddPost />
-      <FormPostList />
-      <div>
-        {
-          posts.map((post,idx)=>
-          <div>
-            <h2>{idx+1}) {post.title}</h2>
-            <p>{post.body}</p>
-          </div>
-          )
-        }
-      </div>
-    </div>
-  );
-}
 
+  return (
+    <div>
+      <div className="add__post">
+        <AddPost addPost={addPost} />
+      </div>
+      <div>
+      </div>
+      {
+      /*<div className="post__list">
+        <PostList postList={PostList} />
+      </div>
+      */
+      }
+    </div>
+  )
+}
 export default App;
