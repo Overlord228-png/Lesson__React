@@ -4,3 +4,4 @@
 27/12/22 -> add new lesson and practic;
 28/12/22 -> lesseon3->homework;
 28/12/22 -> fixsed homework lesson3;
+03/01/23 -> fixsed in lesson3/homeworl;
