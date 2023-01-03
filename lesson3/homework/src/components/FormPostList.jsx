@@ -1,22 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const FromPostList = (props) => {
-    const [posts,setPosts] = useState([])
+
+
     return (
         <div className='post__item'>
             {
-                posts.map((post,idx)=>
-                <div>
+                props.posts.map((post,idx)=>
+                <div key={idx}>
                     <h2>{idx+1}) {post.title}</h2>
                     <p>{post.body}</p>
+                    <button type="" onClick={()=>props.deletePost(post.title)}>delete</button>
                 </div>
                 )
             }
-            <li>
-                <button type="" className="btn btn-number">{props.idx}</button>
-                    {props.post.title}
-                <button type=""  className="btn btn-deleted">Delete</button>
-            </li>
         </div>
     )
 }
