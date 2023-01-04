@@ -6,3 +6,4 @@
 28/12/22 -> fixsed homework lesson3;
 03/01/23 -> fixsed in lesson3/homeworl;
 03/01/23 -> add lesson3/homework2.0;
+04/01/23 -> corrected lesson3/homework2.0;
