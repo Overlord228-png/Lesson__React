@@ -1,22 +1,19 @@
-import React from "react"
-import { useState } from "react"
-
+import React from 'react'
+import { useState } from 'react'
 
 const AddComentsItem = (props) => {
-
-    const [FromData, setFromData] = useState({title: "", body: ""})
-
-    const addComentsFrom = () =>{
-        props.addComentsItem({...FromData})
-        setFromData({title: "", body: ""})
+    const [formData, setFormData] = useState({title:"", body: ""})
+    const addPostForm = () => {
+        props.addComment({...formData})
+        setFormData({title: "", body: ""})
     }
-
-    return(
-        <div className="">
-            <input placeholder="Enter title" onChange={(e)=>setFromData({...FromData,body: e.target.value})} value={FormData.body} className="input" />
-            <input placeholder="Enter body" onChange={(e)=>setFromData({...FromData,body: e.target.value})} value={FormData.body} className="input" />
-            <button type="Add" onClick={()=>addComentsFrom()} className="btn__add">Add</button>
+    return (
+        <div>
+            <input placeholder="Enter title" onChange={(e)=>setFormData({...formData,title: e.target.value})} value={formData.title} className="input"/>
+            <input placeholder="Enter body" onChange={(e)=>setFormData({...formData,body: e.target.value})} value={formData.body}   className="input"/>
+            <button type="Add" onClick={()=>addPostForm()} className="btn__add">add</button>
         </div>
     )
 }
+
 export default AddComentsItem
