@@ -6,16 +6,16 @@ const AddComentsItem = (props) => {
 
     const [FromData, setFromData] = useState({title: "", body: ""})
 
-    const addComentsItem = () =>{
-        props.addComents({...FromData})
+    const addComentsFrom = () =>{
+        props.addComentsItem({...FromData})
         setFromData({title: "", body: ""})
     }
 
     return(
         <div className="">
-            <input value="" />
-            <input value="" />
-            <button type="Add" onClick={()=>addComentsItem()} className="btn__add">Add</button>
+            <input placeholder="Enter title" onChange={(e)=>setFromData({...FromData,body: e.target.value})} value={FormData.body} className="input" />
+            <input placeholder="Enter body" onChange={(e)=>setFromData({...FromData,body: e.target.value})} value={FormData.body} className="input" />
+            <button type="Add" onClick={()=>addComentsFrom()} className="btn__add">Add</button>
         </div>
     )
 }
