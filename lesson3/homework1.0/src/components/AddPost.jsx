@@ -13,7 +13,7 @@ const AddPost = (props) => {
     return(
         <div>
             <input placeholder="Enter title" onChange={(e)=>setFormData({...formData,title: e.target.value})} value={formData.title} className="input" />
-            <input placeholder="Enter body" onChange={(e)=>setFormData({...formData,body: e.target.value})} value={formData.body}   className="input" />
+            <input placeholder="Enter body" onChange={(e)=>setFormData({...formData,body: e.target.value})} value={formData.body} className="input" />
             <button type="Add" onClick={()=>addPostForm()} className="btn__add">Add</button>
         </div>
     )

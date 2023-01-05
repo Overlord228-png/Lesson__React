@@ -6,9 +6,9 @@ const CommentsList = (props) => {
             {
                 props.comments.map((comment,idx) =>
                     <div key={idx}>
-                        <h2>{idx+1}{comment.title}</h2>
+                        <h2>{idx+1}{comment.name}</h2>
                         <p>{comment.body}</p>
-                        <button type="" onClick={()=>props.deleteComment(comment.title)}>delete</button>
+                        <button type="" onClick={()=>props.deleteComment(comment.name)}>delete</button>
                     </div>
                 )
             }

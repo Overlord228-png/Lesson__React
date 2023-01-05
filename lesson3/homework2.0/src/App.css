@@ -43,10 +43,3 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
-.comment__list{
-    width: calc(300px);
-    height: calc(250px);
-    overflow-x: hidden;
-    overflow-y: auto;
-}
