@@ -45,7 +45,6 @@ const App = () => {
   }
   const searchedComments = useMemo(searchItems, [search, comments])
   //const searchedComments = searchItems()
-  
   const [increment,setIncrement] = useState(0)
 
   return (
